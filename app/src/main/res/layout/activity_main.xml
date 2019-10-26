@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:title="Backdrop"
+        app:titleTextColor="#fff"
+        android:background="?attr/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.roacult.backdrop.BackdropLayout
+        android:id="@+id/container"
+        app:front_layout="@id/includedFront"
+        app:back_layout="@id/includedBack"
+        app:toolbarId="@id/toolbar"
+        app:peekHeight="56dp"
+        app:menuDrawable="@drawable/ic_filter_list_black_24dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/includedBack"
+            layout="@layout/back_layout"/>
+        <include
+            android:id="@+id/includedFront"
+            layout="@layout/front_layout"/>
+
+    </com.roacult.backdrop.BackdropLayout>
+
+</LinearLayout>
