@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity implements CompoundButton.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//A backdrop appears behind all other surfaces in an app,
-// displaying contextual and actionable content.
+      //A backdrop appears behind all other surfaces in an app,
+      // displaying contextual and actionable content.
         backdropLayout =(BackdropLayout)findViewById(R.id.container);
 
         //initialize back and front
